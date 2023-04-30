@@ -41,9 +41,9 @@
     "typescript": "^5.0.4"
   },
   "lint-staged": {
-    "**./*.ts": [
-      "npx eslint --fix --ext *.ts",
-      "prettier --write *.ts"
+    "*.ts": [
+      "npx eslint --fix",
+      "prettier --write"
     ]
   },
   "husky": {
