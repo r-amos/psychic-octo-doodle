@@ -1,4 +1,5 @@
 *.json
 *.cjs
+*.config.ts
 dist
 node_modules

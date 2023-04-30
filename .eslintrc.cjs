@@ -18,7 +18,13 @@ module.exports = {
     "plugins": [
         "@typescript-eslint"
     ],
-    "ignorePatterns": ["*.cjs", "./dist", "./node_modules"],
+    "ignorePatterns": [
+        "*.cjs", 
+        "*.config.ts", 
+        "*.config.js", 
+        "./dist", 
+        "./node_modules"
+    ],
     "rules": {
     }
 }
