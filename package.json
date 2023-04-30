@@ -42,7 +42,7 @@
   },
   "lint-staged": {
     "**./*.ts": [
-      "npx eslint --fix --ext .ts .",
+      "npx eslint --fix --ext *.ts ./*",
       "prettier --write ./src"
     ]
   },
