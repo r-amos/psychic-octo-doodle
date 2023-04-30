@@ -42,8 +42,8 @@
   },
   "lint-staged": {
     "**./*.ts": [
-      "npx eslint --fix --ext *.ts ./*",
-      "prettier --write ./src"
+      "npx eslint --fix --ext *.ts",
+      "prettier --write *.ts"
     ]
   },
   "husky": {

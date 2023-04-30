@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 
-let app:        Express = express();
+let app:         Express = express();
 
 app.get('/', (request: Request, response: Response) => response.send('Hello, World!'));
 
