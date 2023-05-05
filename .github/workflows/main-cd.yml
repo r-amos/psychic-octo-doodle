@@ -25,3 +25,19 @@ jobs:
 
       - name: Push to Digital Ocean Registry
         run: docker push registry.digitalocean.com/straebe/node-api:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to Digital Ocean droplet via SSH action
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.DROPLET_HOST }}
+          username: ${{ secrets.DROPLET_USERNAME }}
+          key: ${{ secrets.DROPLET_KEY }}
+          script: |
+            cd /var/www/html/straebe
+            git pull origin master
+            make prod-api
