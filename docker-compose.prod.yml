@@ -3,5 +3,5 @@ services:
   api:
     build:
       dockerfile: ./docker/server/Dockerfile.prod
-    image: ${APP_NAME}-api-prod:${APP_VERSION}
+    image: registry.digitalocean.com/straebe/node-api:latest
     command: npm run start
