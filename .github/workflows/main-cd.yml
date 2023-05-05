@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Build latest
-        run: docker build -t registry.digitalocean.com/straebe/node-api:latest -f ./docker/server/Dockerfile.prod .
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
 
       - name: Provide doctl
         uses: digitalocean/action-doctl@v2
