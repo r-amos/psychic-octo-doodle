@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  api:
+    build:
+      dockerfile: ./docker/server/Dockerfile.dev
+    command: npm run dev
+    image: ${APP_NAME}-api-dev:${APP_VERSION}
+    volumes:
+      - './src:/app/src'

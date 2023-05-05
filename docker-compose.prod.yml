@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  api:
+    build:
+      dockerfile: ./docker/server/Dockerfile.prod
+    image: ${APP_NAME}-api-prod:${APP_VERSION}
+    command: npm run start
