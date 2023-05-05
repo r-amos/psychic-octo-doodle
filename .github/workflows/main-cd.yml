@@ -1,0 +1,27 @@
+name: Node.js CD
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v1
+
+      - name: Build latest
+        run: docker build -t registry.digitalocean.com/straebe/node-api:latest ./docker/server/Dockerfile.prod
+
+      - name: Provide doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITAL_OCEAN_REGISTRY_TOKEN }}
+
+      - name: Login to Digital Ocean Registry
+        run: doctl registry login --expiry-seconds 600
+
+      - name: Push to Digital Ocean Registry
+        run: docker push registry.digitalocean.com/straebe/node-api:latest

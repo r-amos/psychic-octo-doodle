@@ -21,7 +21,8 @@ module.exports = {
     "ignorePatterns": [
         "*.cjs", 
         "*.config.ts", 
-        "*.config.js", 
+        "*.config.js",
+        "*.yml",
         "./dist", 
         "./node_modules"
     ],
