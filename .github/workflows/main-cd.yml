@@ -37,6 +37,7 @@ jobs:
           host: ${{ secrets.DROPLET_HOST }}
           username: ${{ secrets.DROPLET_USERNAME }}
           key: ${{ secrets.DROPLET_KEY }}
+          passphrase: ${{ secrets.DROPLET_PASSPHRASE }}
           script: |
             cd /var/www/html/straebe
             git pull origin master
