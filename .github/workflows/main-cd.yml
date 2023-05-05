@@ -40,5 +40,5 @@ jobs:
           passphrase: ${{ secrets.DROPLET_PASSPHRASE }}
           script: |
             cd /var/www/html/psychic-octo-doodle
-            git pull origin master
-            make prod-api
+            git pull origin main
+            docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --no-deps api
