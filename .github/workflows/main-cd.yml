@@ -39,6 +39,6 @@ jobs:
           key: ${{ secrets.DROPLET_KEY }}
           passphrase: ${{ secrets.DROPLET_PASSPHRASE }}
           script: |
-            cd /var/www/html/straebe
+            cd /var/www/html/psychic-octo-doodle
             git pull origin master
             make prod-api
