@@ -32,13 +32,13 @@ jobs:
 
     steps:
       - name: Deploy to Digital Ocean droplet via SSH action
-        uses: appleboy/ssh-action@v0.1.3
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.DROPLET_HOST }}
           username: ${{ secrets.DROPLET_USERNAME }}
           key: ${{ secrets.DROPLET_KEY }}
           passphrase: ${{ secrets.DROPLET_PASSPHRASE }}
           script: |
-            cd /var/www/html/straebe
+            cd /var/www/html/psychic-octo-doodle
             git pull origin master
             make prod-api
