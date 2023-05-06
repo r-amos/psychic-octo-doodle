@@ -5,10 +5,18 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
+        "plugin:node/recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:security/recommended",
+        "plugin:sonarjs/recommended",
         "prettier"
     ],
     "overrides": [
+        {
+            "files": ["test/**", "src/**/*.test.ts"],
+            "plugins": ["jest"],
+            "extends": ["plugin:jest/recommended"],
+        }
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -16,7 +24,11 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "sonarjs",
+        "jest",
+        "node",
+        "security"
     ],
     "ignorePatterns": [
         "*.cjs", 
