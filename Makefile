@@ -1,5 +1,5 @@
 build:
-	docker-compose -f docker-compose.yml -f docker-compose.$(env).yml build --no-cache
+	docker-compose -f docker-compose.yml -f docker-compose.$(env).yml build
 dev:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 prod:

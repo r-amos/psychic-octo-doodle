@@ -1,4 +1,8 @@
 {
+  "projects": [
+    "<rootDir>/jest.unit.config.json",
+    "<rootDir>/jest.integration.config.json"
+  ],
   "clearMocks": true,
   "collectCoverage": true,
   "coverageDirectory": "coverage",
