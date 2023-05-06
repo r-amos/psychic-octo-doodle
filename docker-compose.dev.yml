@@ -7,3 +7,4 @@ services:
     image: ${APP_NAME}-api-dev:${APP_VERSION}
     volumes:
       - './src:/app/src'
+      - './tests:/app/tests'

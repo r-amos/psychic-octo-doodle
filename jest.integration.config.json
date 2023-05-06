@@ -1,0 +1,10 @@
+{
+  "displayName": "integration",
+  "testMatch": ["<rootDir>/tests/integration/**/*.ts"],
+  "testPathIgnorePatterns": [
+    "<rootDir>/tests/integration/_setup.ts",
+    "<rootDir>/tests/integration/_teardown.ts"
+  ],
+  "globalSetup": "<rootDir>/tests/integration/_setup.ts",
+  "globalTeardown": "<rootDir>/tests/integration/_teardown.ts"
+}
