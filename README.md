@@ -21,6 +21,16 @@ make dev
 make down
 ```
 
+The application can be viewed in the browser:
+```
+http://localhost:8000/
+```
+
+MySQL is running on port 3306
+```
+localhost:3306
+```
+
 ## Production
 
 Production images can be build with:
