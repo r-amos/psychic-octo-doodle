@@ -9,6 +9,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:security/recommended",
         "plugin:sonarjs/recommended",
+        "plugin:import/typescript",
         "prettier"
     ],
     "overrides": [
@@ -31,13 +32,21 @@ module.exports = {
         "security"
     ],
     "ignorePatterns": [
-        "*.cjs", 
-        "*.config.ts", 
+        "*.cjs",
+        "*.config.ts",
         "*.config.js",
         "*.yml",
-        "./dist", 
+        "./dist",
         "./node_modules"
     ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {},
+            "node": {}
+        }
+    },
     "rules": {
-    }
+        "node/no-missing-import": "off",
+        "node/no-unpublished-import": "off"
+    },
 }
